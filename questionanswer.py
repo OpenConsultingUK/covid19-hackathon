@@ -11,9 +11,11 @@ def qna(query):
     """
     from transformers import pipeline
     nlp_qa = pipeline('question-answering')
-    f = open("../data/covidinfo.txt", "r")
+    f = open("data/covidinfo.txt", "r")
     context = f.read() 
 
     response = nlp_qa(context=context, question=query)
     
     return response['answer']
+
+qna('WHat is Covid')
