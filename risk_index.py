@@ -102,5 +102,5 @@ def get_risk_index(countryname,selectiondate):
     master['risk_index'] = risk_index
 
     output = master.loc[(master['location']==countryname) & (master['date']==selectiondate),'risk_index'].values
-    print(output)
-    return output
+    print('the risk index is',output[0])
+    return output[0]
