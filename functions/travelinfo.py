@@ -12,8 +12,7 @@ from io import BytesIO
 import requests
 
 def getTravelInfo(from_Country, to_Country):
-    print(from_Country)
-    print(to_Country)
+    
     
     flight_info_airline,flight_info_Coun,to_code,from_code = data_ingest(from_Country, to_Country)
     
@@ -52,7 +51,7 @@ def getTravelInfo(from_Country, to_Country):
 
 def data_ingest(from_Country, to_Country):
     # COVID 19 GEOGRPAHIC DISTRIBUTION
-    full_url ="/Users/minu/mywork/nlp/covid19-hackathon/data/COVID-19-geographic-disbtribution-worldwide.xlsx"
+    full_url ="../data/COVID-19-geographic-disbtribution-worldwide.xlsx"
     cases_df = pd.read_excel(full_url,sep=" ")
     country_list = cases_df["countriesAndTerritories"].unique().tolist()
     country_list.sort()
@@ -65,15 +64,17 @@ def data_ingest(from_Country, to_Country):
     
     
     # TRAVEL DATA WRT COUNTRY
-    r = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vTxATUFm0tR6Vqq-UAOuqQ-BoQDvYYEe-BmJ20s50yBKDHEifGofP2P1LJ4jWFIu0Pb_4kRhQeyhHmn/pub?gid=0&single=true&output=csv')
-    data = r.content
-    flight_info_Coun = pd.read_csv(BytesIO(data),parse_dates=['published'])
+    #r = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vTxATUFm0tR6Vqq-UAOuqQ-BoQDvYYEe-BmJ20s50yBKDHEifGofP2P1LJ4jWFIu0Pb_4kRhQeyhHmn/pub?gid=0&single=true&output=csv')
+    #data = r.content
+    #flight_info_Coun = pd.read_csv(BytesIO(data),parse_dates=['published'])
+    flight_info_Coun = pd.read_csv("../data/travel_country.csv")
     flight_info_Coun.rename(columns={'adm0_name': 'country'}, inplace=True)
     
     # TRAVEL DATA WRT AIRLINE OF EACH COUNTRY
-    r = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vTxATUFm0tR6Vqq-UAOuqQ-BoQDvYYEe-BmJ20s50yBKDHEifGofP2P1LJ4jWFIu0Pb_4kRhQeyhHmn/pub?gid=646351539&single=true&output=csv')
-    data = r.content
-    flight_info_airline = pd.read_csv(BytesIO(data),parse_dates=['published'])
+    #r = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vTxATUFm0tR6Vqq-UAOuqQ-BoQDvYYEe-BmJ20s50yBKDHEifGofP2P1LJ4jWFIu0Pb_4kRhQeyhHmn/pub?gid=646351539&single=true&output=csv')
+    #data = r.content
+    #flight_info_airline = pd.read_csv(BytesIO(data),parse_dates=['published'])
+    flight_info_airline = pd.read_csv("../data/airline.csv")
     flight_info_airline.rename(columns={'adm0_name': 'country'}, inplace=True)
     
     flight_info_airline["country"]= flight_info_airline["country"].str.replace("'"," ")
@@ -116,5 +117,6 @@ def getAvailableInfo(df):
     text = summarize(text, ratio=0.2, split=False)
     return text
     
-
-    
+#TESTING
+#from_airlines,to_airlines,from_text,to_text= getTravelInfo('India','Australia')
+#print(to_text)
