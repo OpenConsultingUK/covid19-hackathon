@@ -4,8 +4,10 @@ import numpy as np
 import math
 from itertools import chain
 import country_converter as coco
+from functools import lru_cache
 
 
+@lru_cache(maxsize=250)
 def get_risk_index(countryname,selectiondate):
     #load coviddata dataset
     url="https://covid.ourworldindata.org/data/owid-covid-data.csv"
