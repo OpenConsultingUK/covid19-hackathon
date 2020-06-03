@@ -11,20 +11,20 @@ from functools import lru_cache
 @lru_cache(maxsize=250)
 def get_risk_index(countryname,selectiondate):
     #load master dataset
-    ref = pd.read_csv("master_dataset_with_risk_index.csv")
+    ref = pd.read_csv("data/master_dataset_with_risk_index.csv")
     d = max(pd.to_datetime(ref['date']))-timedelta(days=15)
     print ('max date is', max(pd.to_datetime(ref['date'])))
 
     #load coviddata dataset
     #url="https://covid.ourworldindata.org/data/owid-covid-data.csv"
     #coviddata=pd.read_csv(url)
-    coviddata=pd.read_csv("owid-covid-data.csv")
+    coviddata=pd.read_csv("data/owid-covid-data.csv")
     coviddata = coviddata[coviddata['date']>str(d)]
 
     #load mobility dataset
     #url="https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv?cachebust=6d352e35dcffafce"
     #mobility=pd.read_csv(url)
-    mobility=pd.read_csv("Global_Mobility_Report.csv", low_memory=False)
+    mobility=pd.read_csv("data/Global_Mobility_Report.csv", low_memory=False)
     mobility = mobility[mobility['date']>str(d)]
 
     if max(pd.to_datetime(mobility['date']))==max(pd.to_datetime(ref['date'])):
@@ -114,9 +114,9 @@ def get_risk_index(countryname,selectiondate):
 
         master['risk_index'] = risk_index
         master = master[master['date']>max(pd.to_datetime(ref['date']))]
-        master.to_csv('master_dataset_with_risk_index.csv', mode='a', index=False, header=False)
+        master.to_csv('data/master_dataset_with_risk_index.csv', mode='a', index=False, header=False)
 
-    ref_updated = pd.read_csv("master_dataset_with_risk_index.csv")
+    ref_updated = pd.read_csv("data/master_dataset_with_risk_index.csv")
     output = ref_updated.loc[(ref_updated['location']==countryname) & (ref_updated['date']==selectiondate),'risk_index'].values
     print('the risk index is',output[0])
     return output[0]
