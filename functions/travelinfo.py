@@ -118,5 +118,5 @@ def getAvailableInfo(df):
     return text
     
 #TESTING
-#from_airlines,to_airlines,from_text,to_text= getTravelInfo('India','Australia')
-#print(to_text)
+from_airlines,to_airlines,from_text,to_text= getTravelInfo('India','Australia')
+print(to_text)
