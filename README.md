@@ -16,7 +16,7 @@ Prediction Scenario:
 
 Risk Index Formula: 
 
-1. rate of infection: the increase/decrease rate of current total cases against total cases from 14 days ago (normal virus probation period)
+1. rate of infection: the increase/decrease rate of current total cases against total cases from 14 days ago (normal virus incubation period)
 1. number of infection: current total cases per million
 
 Formula refers to uk government risk index guidance: 
