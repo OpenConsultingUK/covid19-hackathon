@@ -1,4 +1,4 @@
-# Covid19 Analysis for Recovery Phase Prediction
+# Covid19 Analysis for Recovery Phase Prediction and Risk Index generator
 
 Source Datasets:
 
