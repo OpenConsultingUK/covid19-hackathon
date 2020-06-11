@@ -1,0 +1,14 @@
+Covid19 Trend Analysis for Recovery Phase Prediction
+
+Source Datasets:
+Our World in Data COVID-19 Testing dataset https://ourworldindata.org/coronavirus-testing
+Google Covid19 Community Mobility Reports https://www.google.com/covid19/mobility/
+Methdology:
+
+Calculate Start of Impact of Covid in a country with 1 case per 1000 population
+Plot the line chart (new cases per 1000 population rolling average 7 days) for:
+Most Affected Countries excluding USA,
+Least Affected Countries
+USA+some other more affected countries not following overall trend.
+Observe that in most countries Covid is getting to manageable levels in 90-100 days from impact date. Some countries are different like USA, India, Iran but overall they should follow the same pattern only taking a bit longer than other countries.
+Note: #rolling average of new cases smoothens the graphs presented.
