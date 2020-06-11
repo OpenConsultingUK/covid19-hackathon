@@ -26,3 +26,17 @@ https://www.spectator.co.uk/article/how-number-10-should-illustrate-its-covid-al
 Prediction Model Build: 
 
 Make use of a classification model to capture relationship between risk drivers (mobility and/or restriction) and risk index to future prediction that aids recovery phase planning
+
+Travel Information during Covid:
+
+The outcome of this analysis will provide current travel information on the countries enquired by the end user. This includes
+1. Which airlines are currently operating from the input countries
+2. What are the current restrictions or travel information available for the countries selected.
+
+The data is divided in two datasets: 
+- COVID-19 restrictions by country: This dataset shows current travel restrictions. 
+- COVID-19 airline restrictions information: This dataset shows restrictions taken by individual airlines or country. 
+
+Information is collected from various sources: IATA, media, national sources, WFP internal and public sources.
+
+Question and Answering on Covid19 Information:
