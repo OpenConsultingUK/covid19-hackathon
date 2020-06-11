@@ -27,6 +27,8 @@ https://www.spectator.co.uk/article/how-number-10-should-illustrate-its-covid-al
 
 Make use of a classification model to capture relationship between risk drivers (mobility and/or restriction) and risk index to future prediction that aids recovery phase planning
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
 ## Travel Information during Covid:
 
 The outcome of this analysis will provide current travel information on the countries enquired by the end user. This includes
