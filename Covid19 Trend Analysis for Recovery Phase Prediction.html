@@ -24,16 +24,16 @@ w\:* {behavior:url(#default#VML);}
  <o:DocumentProperties>
   <o:Author>Mukesh Kumbnani</o:Author>
   <o:LastAuthor>Mukesh Kumbnani</o:LastAuthor>
-  <o:Revision>3</o:Revision>
-  <o:TotalTime>27</o:TotalTime>
+  <o:Revision>6</o:Revision>
+  <o:TotalTime>51</o:TotalTime>
   <o:Created>2020-06-12T09:55:00Z</o:Created>
-  <o:LastSaved>2020-06-12T10:22:00Z</o:LastSaved>
+  <o:LastSaved>2020-06-12T11:00:00Z</o:LastSaved>
   <o:Pages>2</o:Pages>
-  <o:Words>197</o:Words>
-  <o:Characters>1123</o:Characters>
-  <o:Lines>9</o:Lines>
-  <o:Paragraphs>2</o:Paragraphs>
-  <o:CharactersWithSpaces>1318</o:CharactersWithSpaces>
+  <o:Words>250</o:Words>
+  <o:Characters>1426</o:Characters>
+  <o:Lines>11</o:Lines>
+  <o:Paragraphs>3</o:Paragraphs>
+  <o:CharactersWithSpaces>1673</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -47,7 +47,7 @@ href="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/col
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Print</w:View>
-  <w:Zoom>160</w:Zoom>
+  <w:Zoom>148</w:Zoom>
   <w:SpellingState>Clean</w:SpellingState>
   <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
@@ -64,6 +64,7 @@ href="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/col
    <w:BreakWrappedTables/>
    <w:SplitPgBreakAndParaMark/>
   </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
   <m:mathPr>
    <m:mathFont m:val="Cambria Math"/>
    <m:brkBin m:val="before"/>
@@ -668,7 +669,7 @@ href="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/col
 	mso-font-charset:0;
 	mso-generic-font-family:roman;
 	mso-font-pitch:variable;
-	mso-font-signature:3 0 0 0 1 0;}
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{mso-style-unhide:no;
@@ -708,18 +709,6 @@ p
 	font-family:"Times New Roman",serif;
 	mso-fareast-font-family:"Times New Roman";
 	mso-fareast-theme-font:minor-fareast;}
-p.msonormal0, li.msonormal0, div.msonormal0
-	{mso-style-name:msonormal;
-	mso-style-unhide:no;
-	mso-margin-top-alt:auto;
-	margin-right:0cm;
-	mso-margin-bottom-alt:auto;
-	margin-left:0cm;
-	mso-pagination:widow-orphan;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;}
 span.Heading1Char
 	{mso-style-name:"Heading 1 Char";
 	mso-style-priority:9;
@@ -740,6 +729,22 @@ span.Heading1Char
 	color:#2F5496;
 	mso-themecolor:accent1;
 	mso-themeshade:191;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -806,33 +811,36 @@ mso-fareast-font-family:"Times New Roman"'>Covid19 Trend Analysis for Recovery
 Phase Prediction<o:p></o:p></span></h1>
 
 <p style='text-align:justify'>Hi Everyone, my name is Mukesh, and I have been
-looking at the COVID-19 stats ever since we embarked on this hackathon. The
-main data used for this part of trend analysis was the owid-cowid-data
-published by &quot;Our world in Data&quot;.</p>
+looking at the COVID-19 stats ever since we embarked on this hackathon. The main
+data used for this part of trend analysis was the owid-cowid-data published by
+&quot;Our world in Data&quot;.</p>
 
-<p style='text-align:justify'><strong>The gist of it is - COVID-19 follows a
-trend. And for most countries is managed within 100 days from when there was 1 case
-per 1000 population to &lt; 1000 cases per.</strong> There have been
-exceptions, and there have been second wave or two, and there have been early
-and late lockdowns and then lifting of lockdowns.</p>
+<p style='text-align:justify'><strong>The gist of the analysis is - COVID-19
+follows a trend and for most countries it gets to manageable levels within 100
+days. For our starting point we used the date when </strong><b>total cases per thousand&nbsp;population
+was &gt;=&nbsp;1. We see the graph converges to near 0 new cases per thousand
+population around the 100<sup>th</sup> day.</b> There have been exceptions, and
+there have been second wave or two, and there have been early and late
+lockdowns and then lifting of lockdowns.</p>
 
 <p style='text-align:justify'>The charts that I show give you a picture of how
 this 100-day number fits most countries and can used to work out lockdown or
-lifting of lockdowns for the countries that still haven't peaked out with covid-19.</p>
+lifting of lockdowns for the countries that still haven't peaked out with
+covid-19.</p>
 
 <p style='text-align:justify'>The data we chose had a lot of fields that can be
 used but for me the most important one is new cases or for that matter
 new_cases_per_1000 population (derived). Other important thing is huge day to
-day variation of numbers, to compensate for this we have use rolling average
-for last 7 days.</p>
+day variation of numbers, to compensate for this we have use 7 day rolling
+average.</p>
 
 <p>Here are the charts:</p>
 
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-  <td width=299 valign=top style='width:223.95pt;border:solid windowtext 1.0pt;
+  <td width=320 valign=top style='width:240.3pt;border:solid windowtext 1.0pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p><span style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
    id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
@@ -860,11 +868,11 @@ for last 7 days.</p>
    <v:imagedata src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image001.png"
     o:title="A close up of a map&#10;&#10;Description automatically generated"/>
   </v:shape><![endif]--><![if !vml]><img width=278 height=203
-  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image009.png"
+  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image002.png"
   alt="A close up of a map&#10;&#10;Description automatically generated"
   v:shapes="Picture_x0020_1"><![endif]></span></p>
   </td>
-  <td width=302 valign=top style='width:226.85pt;border:solid windowtext 1.0pt;
+  <td width=312 valign=top style='width:234.3pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
   solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p><span style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><!--[if gte vml 1]><v:shape
@@ -873,20 +881,20 @@ for last 7 days.</p>
    <v:imagedata src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image003.png"
     o:title="A close up of text on a white background&#10;&#10;Description automatically generated"/>
   </v:shape><![endif]--><![if !vml]><img width=288 height=210
-  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image010.png"
+  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image004.png"
   alt="A close up of text on a white background&#10;&#10;Description automatically generated"
   v:shapes="Picture_x0020_2"><![endif]></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1'>
-  <td width=299 valign=top style='width:223.95pt;border:solid windowtext 1.0pt;
+  <td width=320 valign=top style='width:240.3pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p align=center style='text-align:center'><span style='font-size:11.0pt;
   mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'>New_cases Most
   affected countries exc. USA<o:p></o:p></span></p>
   </td>
-  <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+  <td width=312 valign=top style='width:234.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -895,8 +903,15 @@ for last 7 days.</p>
   population Most affected countries exc. USA<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2'>
-  <td width=299 valign=top style='width:223.95pt;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:2;height:28.1pt'>
+  <td width=633 colspan=2 valign=top style='width:474.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:28.1pt'>
+  <p><span style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=320 valign=top style='width:240.3pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p><span style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><!--[if gte vml 1]><v:shape
@@ -905,11 +920,11 @@ for last 7 days.</p>
    <v:imagedata src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image005.png"
     o:title="A close up of a logo&#10;&#10;Description automatically generated"/>
   </v:shape><![endif]--><![if !vml]><img width=306 height=222
-  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image011.png"
+  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image006.png"
   alt="A close up of a logo&#10;&#10;Description automatically generated"
-  v:shapes="Picture_x0020_3"><![endif]></span><o:p></o:p></p>
+  v:shapes="Picture_x0020_3"><![endif]></span></p>
   </td>
-  <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+  <td width=312 valign=top style='width:234.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -919,29 +934,38 @@ for last 7 days.</p>
    <v:imagedata src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image007.png"
     o:title="A close up of a map&#10;&#10;Description automatically generated"/>
   </v:shape><![endif]--><![if !vml]><img width=298 height=217
-  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image012.png"
+  src="Covid19%20Trend%20Analysis%20for%20Recovery%20Phase%20Prediction_files/image008.png"
   alt="A close up of a map&#10;&#10;Description automatically generated"
-  v:shapes="Picture_x0020_4"><![endif]></span><o:p></o:p></p>
+  v:shapes="Picture_x0020_4"><![endif]></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
-  <td width=299 valign=top style='width:223.95pt;border:solid windowtext 1.0pt;
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=320 valign=top style='width:240.3pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p align=center style='text-align:center'><span style='font-size:11.0pt;
   mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'>New_cases / 1000
   population least affected countries<o:p></o:p></span></p>
   </td>
-  <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+  <td width=312 valign=top style='width:234.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p align=center style='text-align:center'><span style='font-size:11.0pt;
   mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'>New_cases / 1000
-  population USA and<o:p></o:p></span></p>
+  population USA and<span style='mso-spacerun:yes'>&nbsp; </span>countries not
+  fully following 100 days trend<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
+
+<p><span style='mso-fareast-font-family:"Times New Roman";color:white;
+mso-color-alt:windowtext'>How </span><span style='mso-fareast-font-family:"Times New Roman"'>we
+got here &#8211; we used Databricks to work with this data using Python
+libraries. The notebook for this is available through our Git repository.<o:p></o:p></span></p>
+
+<p><span class=GramE><span style='mso-fareast-font-family:"Times New Roman"'>Thanks</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'> your for listening.<o:p></o:p></span></p>
 
 <p><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
